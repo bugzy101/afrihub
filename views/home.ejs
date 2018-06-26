@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Afrihub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="search-filter.css" rel="stylesheet">
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type= "text/javascript" src = "countries.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+<style>
+
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+
+
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav .search-container {
+  float: right;
+
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.wrapper {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.search-background img {
+    width: 100%;
+}
+.well-searchbox {
+  text-align: center;
+  min-height: 20px;
+  min-width: 100px;
+  padding: 19px;
+  position: absolute;
+  z-index: 80;
+  top: 100px;
+  right: 500px;
+  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.h1 {
+text-align: center;
+  position: relative;
+  z-index: 80;
+  top: 10px;
+  right: 10px;
+
+}
+
+
+.well-searchbox label {
+    color: #fff;
+}
+</style>
+
+
+<body>
+
+		<div class="container">
+        	<%- include('partials/navbar') %>
+		<div class="search-background">
+            <img src="https://lh4.googleusercontent.com/-T4pmKmAS5D4/U0uihfPzEZI/AAAAAAAAA2c/sN0mjJS2bx4/w957-h374-no/141.jpg">
+
+        </div>
+            <div class="well-searchbox">
+		<h1> <font color="green"> SEARCH FOR POSTS </h1></font>
+            	<h2> <font color="green">Software Solutions in Nigeria and Africa</h2></font>
+                <form class="form-horizontal" role="form" method="post">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Keyword</label>
+                        <div class="col-md-8">
+                            <input type="text" name="search" required class="form-control" placeholder="Keyword">
+                        </div>
+                    </div>
+			<div class="form-group">
+                        <label class="col-md-4 control-label">Category</label>
+                        <div class="col-md-8">
+                            <select name="category"class="form-control" placeholder="category">
+                                <option value="">All</option>
+                                <option value="">Assembly Language</option>
+                                <option value="">Database</option>
+                                <option value="">Data Structures</option>
+                                <option value="">Embedded Systems</option>
+                                <option value="">Game Development</option>
+                                <option value="">Graphics Design</option>
+                                <option value="">Hardware</option>
+                                <option value="">Mobile Development</option>
+                                <option value="">Programming</option>
+                                <option value="">Software Engineering</option>
+                                <option value="">Shell Scripting</option>
+                                <option value="">Tutoring</option>
+                                <option value="">Web Application</option>
+                            </select>
+<div class="col-sm-offset-4 col-sm-5">
+                        <button type="submit" class="btn btn-success">Search</button>
+                    </div>
+                        </div>
+                    </div>
+                    
+                </form>
+
+            </div>
+ 	<%- include('partials/footer') %>
+            </div>
+		<script language="javascript">
+			populateCountries("country", "state");
+		</script>
+
+
+
+</body>
+
+
+
+
+
+            

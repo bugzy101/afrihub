@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title><%= title %> | Afrihub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/navbar') %>
+        <div>
+            <h2><font color="blue"><%= title %></font></h2>
+            <p><%= body %></p>
+            <p>Telephone: <%= telephone %></p>
+            <p><font color="green">Created by: <a href="#"><%= poster %></font></a></p>
+	    <p><font color="green">Created on: <%= timestamp %></p></font>
+            <hr>
+        </div>
+    </div>
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-offset-3">
+                <h1>Reply to this ad</h1>
+                <form method="post">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="product_name">Name: </label>
+                                <input type="text" id="poster" class="form-control" name="poster">
+                            </div>
+ 			<div class="form-group">
+                                <label for="email">Email: </label>
+                                <input type="text" id="email" class="form-control" name="email" placeholder="Your email here" required>
+                            </div>
+				<div class="form-group">
+                                <label for="product_price">Message: </label>
+            			<textarea id="desc" class="form-control"name="body" required></textarea>
+
+                            </div>
+                            <button type="submit" class="btn btn-success">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+    </div>
+
+
+
+
+</body>
+
+</html>

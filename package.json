@@ -1,0 +1,34 @@
+{
+  "name": "afrihub",
+  "version": "0.1.1",
+  "description": "An app where one can find and advertise for services",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henry Amuka <bugzy231@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "faker": "^4.1.0",
+    "mongoose": "^5.1.4",
+    "nodemailer": "^4.6.7",
+    "nodemon": "^1.17.5",
+    "util": "^0.11.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugzy101/afrihub.git"
+  },
+  "keywords": [
+    "afriposts"
+  ],
+  "bugs": {
+    "url": "https://github.com/bugzy101/afrihub/issues"
+  },
+  "homepage": "https://github.com/bugzy101/afrihub#readme"
+}
