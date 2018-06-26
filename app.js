@@ -233,7 +233,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/afrihub', function(err, db) {
   service: 'gmail',
   auth: {
     user:'bugzy231@gmail.com',
-    pass:'viperisreal'
+    pass:'*********'
   }
 });
 
