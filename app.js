@@ -111,9 +111,6 @@ MongoClient.connect(url, function(err, db) {
 });
 
 
-
-
-
    var perPage = 12
     var page = req.params.page || 1
 
@@ -175,7 +172,7 @@ var perPage = 12
 
          MongoClient.connect(url, function(err, db) {
 	if(err) throw err;
-  	var dbo = db.db("afrihub");
+  	var dbo = db.db("sampledb");
         dbo.collection('posts').find({
 
 	"$text": {
@@ -224,7 +221,7 @@ var id = new require('mongodb').ObjectID(req.params._id);
 
 MongoClient.connect(url, function(err, db) {
 	if(err) throw err;
-  	var dbo = db.db("afrihub");
+  	var dbo = db.db("sampledb");
         dbo.collection('posts').findOne({
 	_id: id
         }, function(err, post){
@@ -260,7 +257,7 @@ var id = new require('mongodb').ObjectID(req.params._id);
 
 MongoClient.connect(url, function(err, db) {
 	if(err) throw err;
-  	var dbo = db.db("afrihub");
+  	var dbo = db.db("sampledb");
         dbo.collection('posts').findOne({
 	_id: id
         }, function(err, post){
@@ -317,7 +314,7 @@ app.post('/search', function(req, res) {
 
          MongoClient.connect(url, function(err, db) {
 	if(err) throw err;
-  	var dbo = db.db("afrihub");
+  	var dbo = db.db("sampledb");
         dbo.collection('posts').find({
 
 	"$text": {
