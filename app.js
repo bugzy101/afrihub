@@ -1,18 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // require and instantiate express
 var express = require('express')
 var path = require('path')
@@ -22,11 +8,12 @@ var faker = require('faker')
 var nodemailer = require('nodemailer')
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose').set('debug', true);
-mongoose.connect("mongodb://admin:secret@mongodb/sampledb")
+mongoose.connect("mongodb://127.0.0.1:27017/sampledb")
 var assert = require('assert');  
 var util=require('util');
 
 var url = "mongodb://admin:secret@mongodb/sampledb";
+
 
 
 
@@ -55,22 +42,10 @@ app.use(function(req, res, next){
     next();
 });
 
-// set the view engine to ejs
-app.set('view engine', 'ejs')
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-
-MongoClient.connect(url, function(err, db) {
-	if (err) throw err;
-	// db pointing to newdb
-	console.log("Switched to "+db.databaseName+" database");
-  	var dbo = db.db("afrihub");
-	// documents to be inserted
-	var docs = [{ poster: "Bugzy", email: "bugzy231@gmail.com", telephone:"+2348109616049", category:"Programming",title:"I will do your programming", body: "I am an advanced Java programmer. I can also programm in c and c++. Do you have a java project at hand? I am your guy. contact me for your programming needs", timestamp: new Date()},
+var docs = [{ poster: "Bugzy", email: "bugzy231@gmail.com", telephone:"+2348109616049", category:"Programming",title:"I will do your programming", body: "I am an advanced Java programmer. I can also programm in c and c++. Do you have a java project at hand? I am your guy. contact me for your programming needs", timestamp: new Date()},
 		    { poster: "Henry", email: "h.amuka@yhoo.ca", telephone:"+2348109616049", category:"Database",title:"I am a Database Administrator", body: "I am into database management. I design and manage relational database. If you are looking for a database administrator, I am your guy. If you are looking to design a relational database for your business, contact me.", timestamp: new Date()},
 		    { poster: "Nonso", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"web application",title:"I will design your websites at affordable rate", body: "I am into web design. I do modern and up to date web application. I will design, host and manage your web applications at an affordable rate. Contact me for details.", timestamp: new Date()},
 		    { poster: "Nony", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"software engineering",title:"I am a software engineer",body:"I am a software engineer. I am an advanced Java, C, and C++ programmer. contact me for your small scale and huge projects.", timestamp: new Date() },
@@ -84,15 +59,17 @@ MongoClient.connect(url, function(err, db) {
 		    { poster: "Bugz101", email: "h.amuka@yhoo.ca", telephone:"+2348109616049",category:"Tutoring", title:"Are you looking for a tutor in programming?",body: "I am your tutor in programming. I will teach you Java, C, C++, relational database, web application, mobile application, etc. I will also do your computer science assignments and projects at affordable rate. Contact me for details.", timestamp: new Date()},
 		    { poster: "Nonso", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"Software Engineering",title:"I am a software engineer",body: "I am a software engineer. I can design applications in Java, C, C++, python, javascript, etc. We design huge projects. Just provide your functional and non-functional requirements and I will do a good job for you.", timestamp: new Date() },
 		    { poster: "ChiNonso", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"Web Application",title:"I am looking for a web designer",body:"I am looking for someone to design my website at a reasonable price. Please contact me if you are into web design", timestamp: new Date() }];
-	
-	// insert multiple documents to 'users' collection using insertOne
-	dbo.collection("posts").insertMany(docs, function(err, res) {
-		if (err) throw err;
-		console.log(res.insertedCount+" documents inserted");
-		// close the connection to db when you are done with it
-		db.close();
-	});
-});
+
+
+
+
+
+// set the view engine to ejs
+app.set('view engine', 'ejs')
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 
@@ -114,6 +91,29 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/posts', (req, res) => {
+
+
+MongoClient.connect(url, function(err, db) {
+	if (err) throw err;
+	// db pointing to newdb
+	console.log("Switched to "+db.databaseName+" database");
+  	var dbo = db.db("sampledb");
+	// documents to be inserted
+	
+	
+	// insert multiple documents to 'users' collection using insertOne
+	dbo.collection("posts").insertMany(docs, function(err, res) {
+		if (err) throw err;
+		console.log(res.insertedCount+" documents inserted");
+		// close the connection to db when you are done with it
+		db.close();
+	});
+});
+
+
+
+
+
    var perPage = 12
     var page = req.params.page || 1
 
