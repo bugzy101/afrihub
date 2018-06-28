@@ -49,39 +49,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-
-MongoClient.connect(url, function(err, db) {
-	if (err) throw err;
-	// db pointing to newdb
-	console.log("Switched to "+db.databaseName+" database");
-  	var dbo = db.db("afrihub");
-	// documents to be inserted
-	var docs = [{ poster: "Bugzy", email: "bugzy231@gmail.com", telephone:"+2348109616049", category:"Programming",title:"I will do your programming", body: "I am an advanced Java programmer. I can also programm in c and c++. Do you have a java project at hand? I am your guy. contact me for your programming needs", timestamp: new Date()},
-		    { poster: "Henry", email: "h.amuka@yhoo.ca", telephone:"+2348109616049", category:"Database",title:"I am a Database Administrator", body: "I am into database management. I design and manage relational database. If you are looking for a database administrator, I am your guy. If you are looking to design a relational database for your business, contact me.", timestamp: new Date()},
-		    { poster: "Nonso", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"web application",title:"I will design your websites at affordable rate", body: "I am into web design. I do modern and up to date web application. I will design, host and manage your web applications at an affordable rate. Contact me for details.", timestamp: new Date()},
-		    { poster: "Nony", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"software engineering",title:"I am a software engineer",body:"I am a software engineer. I am an advanced Java, C, and C++ programmer. contact me for your small scale and huge projects.", timestamp: new Date() },
-		    { poster: "Nonyyo", email: "bugzy231@gmail.com", telephone:"+2348109616049", category:"Data Structure",title:"I am a data analyst", body: "I am into data mining and data management. I will manage your huge database and provide real time efficient data structures for your programs for efficiency. Contact me for an efficient programming projects", timestamp: new Date()},
-		    { poster: "Chukwunonso", email: "h.amuka@yhoo.ca",telephone:"+2348109616049",category:"Embedded Systems",title:"I am into embedded systems", body: "I am an embedded system engineer. I am good at assembly language. Contact me for details.", timestamp: new Date() },
-		    { poster: "Blue Ocean", email: "h.amuka@yhoo.ca",telephone:"+2348109616049",category:"Game Development",title:"I will do your programming",title:"We are looking for someone into game development",body: "Blue Ocean Business World Limited is looking for industrious people to join our team of software engineers, realtors, financial service specialists. We are looking for talented and hardworking people in our software, real estate and financial departments. We are looking for people with the knowledge of web applications, mobile applications, desktop application and database management service, real estate services, accounting, book keeping, Taxes", timestamp: new Date() },
-		    { poster: "Blue Tech", email: "bugzy231@gmail.com",telephone:"+2348109616049",category:"Graphics Design",title:"I am looking for a graphics designer",body: "Blue Ocean Business World Limited is looking for industrious people to join our team of software engineers, realtors, financial service specialists. We are looking for talented and hardworking people in our software, real estate and financial departments. We are looking for people with the knowledge of web applications, mobile applications, desktop application and database management service, real estate services, accounting, book keeping, Taxes.", timestamp: new Date() },
-		    { poster: "Amuka", email: "bugzy231@gmail.com",telephone:"+2348109616049", category:"Hardware",title:"Cisqo and hardware coupling", body:"I am into computer hardware. I have ComptIA A+ and cisqo certifications. Contact me for details", timestamp: new Date()},
-		    { poster: "bugzy101", email: "bugzy231@gmail.com",telephone:"+2348109616049", category:"Mobile Development",title:"I will develop mobile applications for you",body: "I am into mobile app development. I develop android and iOS applications. Please feel free to contact me for your mobile apps dev. ", timestamp: new Date()},
-		    { poster: "hamuka", email: "h.amuka@yhoo.ca", telephone:"+2348109616049", category:"Shell Scripting",title:"I will do your shell and kernel management",body: "are you looking for someone to manage your shell and linux kernel? I am your guy. I can write shell scripts(wrappers) for your projects. Please contact me for details", timestamp: new Date()},
-		    { poster: "Bugz101", email: "h.amuka@yhoo.ca", telephone:"+2348109616049",category:"Tutoring", title:"Are you looking for a tutor in programming?",body: "I am your tutor in programming. I will teach you Java, C, C++, relational database, web application, mobile application, etc. I will also do your computer science assignments and projects at affordable rate. Contact me for details.", timestamp: new Date()},
-		    { poster: "Nonso", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"Software Engineering",title:"I am a software engineer",body: "I am a software engineer. I can design applications in Java, C, C++, python, javascript, etc. We design huge projects. Just provide your functional and non-functional requirements and I will do a good job for you.", timestamp: new Date() },
-		    { poster: "ChiNonso", email: "bugzy231@gmail.com", telephone:"+2348109616049",category:"Web Application",title:"I am looking for a web designer",body:"I am looking for someone to design my website at a reasonable price. Please contact me if you are into web design", timestamp: new Date() }];
-	
-	// insert multiple documents to 'users' collection using insertOne
-	dbo.collection("posts").insertMany(docs, function(err, res) {
-		if (err) throw err;
-		console.log(res.insertedCount+" documents inserted");
-		// close the connection to db when you are done with it
-		db.close();
-	});
-});
-
-
-
 // blog home page
 app.get('/', (req, res) => {
 
