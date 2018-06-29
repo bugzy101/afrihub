@@ -21,11 +21,11 @@ var db = mongoose.connection;
 
 
 // Initialize connection once
-MongoClient.connect("mongodb://localhost:27017/sampledb", function(err, database) {
-  if(err) throw err;
+//MongoClient.connect("mongodb://localhost:27017/sampledb", function(err, database) {
+  //if(err) throw err;
 
-  db = database;
-});
+ // db = database;
+//});
 
 
 // fake posts to simulate a database
