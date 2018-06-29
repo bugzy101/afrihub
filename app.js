@@ -188,7 +188,6 @@ var perPage = 12
 	if(err) throw err;
   	var dbo = db.db("sampledb");
         dbo.collection('posts').find({
-
 	"$text": {
 	      "$search": req.body.search
 	    }
@@ -206,9 +205,9 @@ var perPage = 12
 		$meta: "textScore"
 	      }
 	    }
-	  }).toArray(function(err, items) {
+	  }).toArray(function(err, posts) {
 	    res.render('posts', {
-			posts: items,
+			posts: posts,
 			current: page,
 		        pages: Math.ceil(120 / perPage)
 	  })
@@ -330,7 +329,6 @@ app.post('/search', function(req, res) {
 	if(err) throw err;
   	var dbo = db.db("sampledb");
         dbo.collection('posts').find({
-
 	"$text": {
 	      "$search": req.body.search
 	    }
@@ -348,9 +346,9 @@ app.post('/search', function(req, res) {
 		$meta: "textScore"
 	      }
 	    }
-	  }).toArray(function(err, items) {
+	  }).toArray(function(err, posts) {
 	    res.render('posts', {
-			posts: items,
+			posts: posts,
 			current: page,
 		        pages: Math.ceil(120 / perPage)
 	  })
