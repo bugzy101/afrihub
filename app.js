@@ -8,15 +8,14 @@ var faker = require('faker')
 var nodemailer = require('nodemailer')
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose').set('debug', true);
-mongoose.connect("mongodb://127.0.0.1:27017/sampledb")
-//mongoose.connect(encodeURI(process.env.DB_CONNECT))
 var assert = require('assert');  
 var util=require('util');
 var Server = require('mongodb').Server;
 
 var url = "mongodb://admin:secret@mongodb/sampledb";
 
-
+//mongoose.connect("mongodb://127.0.0.1:27017/sampledb")
+mongoose.connect(url)
 
 var db = mongoose.connection;
 
