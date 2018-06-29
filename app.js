@@ -9,15 +9,25 @@ var nodemailer = require('nodemailer')
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose').set('debug', true);
 mongoose.connect("mongodb://127.0.0.1:27017/sampledb")
+//mongoose.connect(encodeURI(process.env.DB_CONNECT))
 var assert = require('assert');  
 var util=require('util');
+var Server = require('mongodb').Server;
 
 var url = "mongodb://admin:secret@mongodb/sampledb";
 
 
 
-
 var db = mongoose.connection;
+
+
+// Initialize connection once
+MongoClient.connect("mongodb://localhost:27017/sampledb", function(err, database) {
+  if(err) throw err;
+
+  db = database;
+});
+
 
 // fake posts to simulate a database
 
@@ -73,6 +83,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
+
+
+
+
+
+
 // blog home page
 app.get('/', (req, res) => {
 
@@ -109,7 +125,6 @@ MongoClient.connect(url, function(err, db) {
 		db.close();
 	});
 });
-
 
    var perPage = 12
     var page = req.params.page || 1
