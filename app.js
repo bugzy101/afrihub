@@ -80,10 +80,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+/*
+MongoClient.connect(url, function(err, db) {
+	if (err) throw err;
+	// db pointing to newdb
+	console.log("Switched to "+db.databaseName+" database");
+  	var dbo = db.db("sampledb");
+	// documents to be inserted
+	
+	
+	// insert multiple documents to 'users' collection using insertOne
+	dbo.collection("posts").insertMany(docs, function(err, res) {
+		if (err) throw err;
+		console.log(res.insertedCount+" documents inserted");
+		// close the connection to db when you are done with it
+		db.close();
+	});
+});
 
 
-
-
+*/
 
 
 
@@ -106,24 +122,6 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/posts', (req, res) => {
-
-
-MongoClient.connect(url, function(err, db) {
-	if (err) throw err;
-	// db pointing to newdb
-	console.log("Switched to "+db.databaseName+" database");
-  	var dbo = db.db("sampledb");
-	// documents to be inserted
-	
-	
-	// insert multiple documents to 'users' collection using insertOne
-	dbo.collection("posts").insertMany(docs, function(err, res) {
-		if (err) throw err;
-		console.log(res.insertedCount+" documents inserted");
-		// close the connection to db when you are done with it
-		db.close();
-	});
-});
 
    var perPage = 12
     var page = req.params.page || 1
