@@ -327,6 +327,7 @@ app.post('/search', function(req, res) {
          MongoClient.connect(url, function(err, db) {
 	if(err) throw err;
   	var dbo = db.db("sampledb");
+	dbo.collection('posts').createIndex( { name: "text", poster: "text", category: "text", title: "text", body: "text" } )
         dbo.collection('posts').find({
 	"$text": {
 	      "$search": req.body.search
