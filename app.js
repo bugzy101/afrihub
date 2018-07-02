@@ -185,6 +185,7 @@ var perPage = 12
          MongoClient.connect(url, function(err, db) {
 	if(err) throw err;
   	var dbo = db.db("sampledb");
+	dbo.posts.createIndex( { name: "text", poster: "text", category: "text", title: "text", body: "text" } )
         dbo.collection('posts').find({
 	"$text": {
 	      "$search": req.body.search
@@ -203,7 +204,7 @@ var perPage = 12
 		$meta: "textScore"
 	      }
 	    }
-	  }) function(err, posts)  {
+	  }).toArray(function(err, posts)  {
 	    res.render('posts', {
 			posts: posts,
 			current: page,
