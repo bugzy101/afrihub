@@ -203,7 +203,7 @@ var perPage = 12
 		$meta: "textScore"
 	      }
 	    }
-	  }).exec(function(err, posts)  {
+	  }) function(err, posts)  {
 	    res.render('posts', {
 			posts: posts,
 			current: page,
