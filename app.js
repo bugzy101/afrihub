@@ -289,15 +289,15 @@ MongoClient.connect(url, function(err, db) {
 
 
   var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'smtp.1and1.com',
   auth: {
-    user:'bugzy231@gmail.com',
-    pass:'*********'
+    user:'response@myafrihub.com',
+    pass:'Jarule11!'
   }
 });
 
 var mailOptions = {
-  from: 'bugzy231@gmail.com',
+  from: 'response@myafrihub.com',
   to: post.email,
   subject: 'Afrihub: Re:' + post.title,
   text: req.body.body
