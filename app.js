@@ -303,7 +303,7 @@ var mailOptions = {
   from: 'AFRIHUB RESPONSE <response@myafrihub.com>',
   to: post.email,
   subject: 'Afrihub: Re:' + post.title,
-  text: req.body.body
+  text: req.body.body,
   html: '<h1>Reply to you ad you posted on myafrihub</h1><p>Do not reply to this mail directly</p><p>Poster: <%=post.poster%></p> <p>Repl to: <%=post.email%> </p>'
 };
 
