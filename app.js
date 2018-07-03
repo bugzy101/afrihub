@@ -11,6 +11,7 @@ var mongoose = require('mongoose').set('debug', true);
 var assert = require('assert');  
 var util=require('util');
 var Server = require('mongodb').Server;
+var smtpTransport = require('nodemailer-smtp-transport');
 
 var url = "mongodb://admin:secret@mongodb/sampledb";
 
@@ -288,13 +289,15 @@ MongoClient.connect(url, function(err, db) {
     
 
 
-  var transporter = nodemailer.createTransport({
-  service: 'smtp.1and1.com',
+  var transporter = nodemailer.createTransport(smtpTransport({
+  host: 'smtp.1and1.com',
+  port: 587,
+  secure: true, // use SSL
   auth: {
     user:'response@myafrihub.com',
-    pass:'*********************'
+    pass:'Jarule111!'
   }
-});
+}));
 
 var mailOptions = {
   from: 'response@myafrihub.com',
