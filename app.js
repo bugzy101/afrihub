@@ -304,7 +304,7 @@ var mailOptions = {
   to: post.email,
   subject: 'Afrihub: Re:' + post.title,
   text: req.body.body,
-  html: '<h1>Reply to you ad you posted on myafrihub</h1><p>Do not reply to this mail directly</p><p>Poster: <%=post.poster%></p> <p>Repl to: <%=post.email%> </p>'
+  html: '<h1>Reply to your ad on myafrihub</h1><h2>Do not reply to this mail directly</h2><p>Poster: '+post.poster+' </p> <p>Reply to: '+post.email+' </p> <p>Response: '+req.body.body+'</p>
 };
 
 transporter.sendMail(mailOptions, function(error, info){
