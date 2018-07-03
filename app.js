@@ -292,7 +292,7 @@ MongoClient.connect(url, function(err, db) {
   service: 'smtp.1and1.com',
   auth: {
     user:'response@myafrihub.com',
-    pass:'**********'
+    pass:'Viperisreal101!'
   }
 });
 
