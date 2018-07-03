@@ -295,7 +295,7 @@ MongoClient.connect(url, function(err, db) {
   secure: false, // use SSL
   auth: {
     user:'response@myafrihub.com',
-    pass:'Jarule111!'
+    pass:'Jarule11!'
   }
 }));
 
