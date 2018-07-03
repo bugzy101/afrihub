@@ -300,7 +300,7 @@ MongoClient.connect(url, function(err, db) {
 }));
 
 var mailOptions = {
-  from: 'response@myafrihub.com',
+  from: req.body.email,
   to: post.email,
   subject: 'Afrihub: Re:' + post.title,
   text: req.body.body
