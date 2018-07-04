@@ -83,11 +83,12 @@ body {
 }
 </style>
 </head>
+        <%- include('partials/navbar') %>
 
 <body>
     <div class="container">
-        <%- include('partials/navbar') %>
         <div>
+            <h2><font color="blue">POST</font></h2>
             <h2><font color="blue"><%= title %></font></h2>
             <p><%= body %></p>
             <p>Telephone: <%= telephone %></p>

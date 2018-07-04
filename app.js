@@ -13,6 +13,8 @@ var util=require('util');
 var Server = require('mongodb').Server;
 var smtpTransport = require('nodemailer-smtp-transport');
 
+
+//var url = "mongodb://localhost:27017/sampledb";
 var url = "mongodb://admin:secret@mongodb/sampledb";
 
 //mongoose.connect("mongodb://127.0.0.1:27017/sampledb")

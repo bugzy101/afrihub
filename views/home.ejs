@@ -5,6 +5,11 @@
 <head>
     <meta charset="utf-8">
     <title>Afrihub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <link href="search-filter.css" rel="stylesheet">
@@ -12,12 +17,28 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type= "text/javascript" src = "countries.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 
 
 <style>
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/infotech.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
 
 body {
   margin: 0;
@@ -142,61 +163,171 @@ text-align: center;
 .well-searchbox label {
     color: #fff;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+.openBtn {
+    background: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.openBtn:hover {
+    background: #bbb;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.overlay .closebtn:hover {
+    color: #ccc;
+}
+
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: black;
+}
+
+.overlay input[type=text]:hover {
+    background: black;
+}
+
+.overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background: #bbb;
+}
+
+
 </style>
 
 
+       <%- include('partials/navbar') %>
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">A Hub For IT Professionals</span><br>
+<span class="w3-large">Find IT professionals and their services in your area</span>
+<p class="w3-large">Advertise your Skills and IT services</p>
+<p class="w3-large">Find Software Programmers, Database administrators, Web Designers, Tutors, Software Engineers, Data Analysts, Game Developers, Mobile Developers, Source your IT Labour force, and lots more </p>
+
+   
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form method="post" action="/search">
+      <input type="text" placeholder="Search for ads.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<button class="openBtn" onclick="openSearch()">Search for posts</button>
+<p><a href="/about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+<p><a href="/posts" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">View Posts</a></p>
+<p><a href="/postad" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Post New IT Service</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
 <body>
 
-		<div class="container">
-        	<%- include('partials/navbar') %>
-		<div class="search-background">
-            <img src="https://lh4.googleusercontent.com/-T4pmKmAS5D4/U0uihfPzEZI/AAAAAAAAA2c/sN0mjJS2bx4/w957-h374-no/141.jpg">
+		
+       <%- include('partials/footer') %>
+		<script>
 
-        </div>
-            <div class="well-searchbox">
-		<h1> <font color="white"> SEARCH FOR POSTS </h1></font>
-            	<h2> <font color="white">Software Solutions in Nigeria and Africa</h2></font>
-                <form class="form-horizontal" role="form" method="post">
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Keyword</label>
-                        <div class="col-md-8">
-                            <input type="text" name="search" required class="form-control" placeholder="Keyword">
-                        </div>
-                    </div>
-			<div class="form-group">
-                        <label class="col-md-4 control-label">Category</label>
-                        <div class="col-md-8">
-                            <select name="category"class="form-control" placeholder="category">
-                                <option value="">All</option>
-                                <option value="">Assembly Language</option>
-                                <option value="">Database</option>
-                                <option value="">Data Structures</option>
-                                <option value="">Embedded Systems</option>
-                                <option value="">Game Development</option>
-                                <option value="">Graphics Design</option>
-                                <option value="">Hardware</option>
-                                <option value="">Mobile Development</option>
-                                <option value="">Programming</option>
-                                <option value="">Software Engineering</option>
-                                <option value="">Shell Scripting</option>
-                                <option value="">Tutoring</option>
-                                <option value="">Web Application</option>
-                            </select>
-<div class="col-sm-offset-4 col-sm-5">
-                        <button type="submit" class="btn btn-success">Search</button>
-                    </div>
-                        </div>
-                    </div>
-                    
-                </form>
 
-            </div>
- 	<%- include('partials/footer') %>
-            </div>
-		<script language="javascript">
-			populateCountries("country", "state");
-		</script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+function myFunction() {
+    var x = document.getElementById("mySidebar");
+    if (x.className === "mySidebar") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+</script>
 
 
 </body>
