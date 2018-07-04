@@ -52,118 +52,6 @@ body {
 }
 
 
-
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.topnav .search-container {
-  float: right;
-
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background: #ccc;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.wrapper {
-  position: relative;
-}
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(50, 50, 50, 0.5);
-}
-
-.search-background img {
-    width: 100%;
-}
-.well-searchbox {
-  text-align: center;
-  min-height: 20px;
-  min-width: 100px;
-  padding: 19px;
-  position: absolute;
-  z-index: 80;
-  top: 100px;
-  right: 500px;
-  background: rgba(0, 0, 0, 0.6);
-  margin-bottom: 20px;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-.h1 {
-text-align: center;
-  position: relative;
-  z-index: 80;
-  top: 10px;
-  right: 10px;
-
-}
-
-
-.well-searchbox label {
-    color: #fff;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -264,9 +152,7 @@ text-align: center;
   </div>
 </div>
 <button class="openBtn" onclick="openSearch()">Search for posts</button>
-<p><a href="/about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
 <p><a href="/posts" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">View Posts</a></p>
-<p><a href="/postad" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Post New IT Service</a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
