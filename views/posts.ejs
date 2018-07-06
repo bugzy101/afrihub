@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Afrihub</title>
+    <title>My Afrihub</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <style>
 body {
@@ -104,9 +104,9 @@ body {
         <div class="jumbotron">
 		<div class="search-background">
 	<img src="/img/infotech.jpg">
-            <h1>Afrihub</h1>
+            <h1>MY Afrihub</h1>
 		</div>
-            <p class="lead">The Place for Tech Solutions..</p>
+            <p class="lead">The Hub for Software Technology Solutions..</p>
         </div>
 
         <div class="row">
@@ -118,7 +118,7 @@ body {
                       <h4 class="list-group-item-heading"><font color="blue"><%= post.title %></h4></font>
                       <p class="list-group-item-text"><font color="green"><%= post.timestamp %></p></font>
                       <p class="list-group-item-text"><%= post.body %></p>
-                      <p class="list-group-item-text"><%= post.telephone %></p>
+                      <p class="list-group-item-text"> <i class="fa fa-phone"></i> <%= post.telephone %></p>
                     </a>
                   <% }) %>
                 </div>
