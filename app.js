@@ -296,13 +296,14 @@ MongoClient.connect(url, function(err, db) {
   port: 587,
   debug:true,
   ignoreTLS: true,
+  tls: {
+        rejectUnauthorized: false
+    },
   auth: {
     user:'response@myafrihub.com.ng',
     pass:'jarule11!'
-  },
-tls: {
-        rejectUnauthorized: false
-    }
+  }
+
 }));
 
 var mailOptions = {
