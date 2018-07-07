@@ -295,10 +295,13 @@ MongoClient.connect(url, function(err, db) {
   host: 'mail.myafrihub.com.ng',
   port: 587,
   secure: false, // use SSL
-  rejectUnauthorized:false,
+  ignoreTLS: true,
+  tls: {
+        rejectUnauthorized:false
+    }
   auth: {
     user:'_mainaccount@myafrihub.com.ng',
-    pass:'********'
+    pass:'c07fgg1NE3'
   }
 }));
 
