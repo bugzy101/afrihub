@@ -295,7 +295,7 @@ MongoClient.connect(url, function(err, db) {
   host: 'mail.myafrihub.com.ng',
   port: 587,
   debug:true,
-  ignoreTLS: true,
+  //ignoreTLS:true,
   tls: {
         rejectUnauthorized: false
     },
