@@ -297,7 +297,7 @@ MongoClient.connect(url, function(err, db) {
   secure: false, // use SSL
   ignoreTLS: true,
   tls: {
-        rejectUnauthorized:false
+        rejectUnauthorized:false,
     }
   auth: {
     user:'_mainaccount@myafrihub.com.ng',
