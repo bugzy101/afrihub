@@ -293,11 +293,11 @@ MongoClient.connect(url, function(err, db) {
 
   var transporter = nodemailer.createTransport(smtpTransport({
   host: 'mail.myafrihub.com.ng',
-  port: 443,
+  port: 587,
   secure: false, // use SSL
   auth: {
     user:'response@myafrihub.com.ng',
-    pass:'jarule11!'
+    pass:'**************************'
   }
 }));
 
