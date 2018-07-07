@@ -298,11 +298,14 @@ MongoClient.connect(url, function(err, db) {
   auth: {
     user:'response@myafrihub.com.ng',
     pass:'jarule11!'
-  }
+  },
+tls: {
+        rejectUnauthorized: false
+    }
 }));
 
 var mailOptions = {
-  from: 'AFRIHUB RESPONSE <response@myafrihub.com>',
+  from: 'AFRIHUB RESPONSE <response@myafrihub.com.ng>',
   to: post.email,
   subject: 'Afrihub: Re:' + post.title,
   text: req.body.body,
