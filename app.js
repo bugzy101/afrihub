@@ -298,8 +298,8 @@ MongoClient.connect(url, function(err, db) {
   ignoreTLS: true,
   rejectUnauthorized:false,
   auth: {
-    user:'_mainaccount@myafrihub.com.ng',
-    pass:'c07fgg1NE3'
+    user:'response@myafrihub.com.ng',
+    pass:'jarule11!'
   }
 }));
 
