@@ -296,9 +296,7 @@ MongoClient.connect(url, function(err, db) {
   port: 587,
   secure: false, // use SSL
   ignoreTLS: true,
-  tls: {
-        rejectUnauthorized:false,
-    }
+  rejectUnauthorized:false,
   auth: {
     user:'_mainaccount@myafrihub.com.ng',
     pass:'c07fgg1NE3'
