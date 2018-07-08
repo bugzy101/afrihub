@@ -292,7 +292,7 @@ MongoClient.connect(url, function(err, db) {
 
 
   var transporter = nodemailer.createTransport(smtpTransport({
-  name: pigeon.whogohost.com,
+  name: 'pigeon.whogohost.com',
   host: 'mail.myafrihub.com.ng',
   port: 465,
   secure:true,
