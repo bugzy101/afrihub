@@ -301,7 +301,7 @@ MongoClient.connect(url, function(err, db) {
    },
   auth: {
     user:'response@myafrihub.com.ng',
-    pass:'jarule11!'
+    pass:'**********'
   }
 
 }));
