@@ -14,8 +14,8 @@ var Server = require('mongodb').Server;
 var smtpTransport = require('nodemailer-smtp-transport');
 
 
-//var url = "mongodb://localhost:27017/sampledb";
-var url = "mongodb://admin:secret@mongodb/sampledb";
+var url = "mongodb://localhost:27017/sampledb";
+//var url = "mongodb://admin:secret@mongodb/sampledb";
 
 mongoose.connect(url)
 
@@ -224,6 +224,18 @@ MongoClient.connect(url, function(err, db) {
 })
 
 
+app.get('/post/:_id', (req, res) => {
+  // find the post in the `posts` array
+
+//const post = posts.filter((post) => {
+       // return post.id == req.params.id
+      //})[0]
+
+
+  
+})
+
+
 app.post('/post/:_id', (req, res) => {
 
 
@@ -267,7 +279,7 @@ console.log("poster: " + heading + responder + emailaddress + response);
    },
   auth: {
     user:'response@myafrihub.com.ng',
-    pass:'jarule11!'
+    pass:'*************'
   }
 
 }));
