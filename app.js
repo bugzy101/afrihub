@@ -14,8 +14,8 @@ var Server = require('mongodb').Server;
 var smtpTransport = require('nodemailer-smtp-transport');
 
 
-var url = "mongodb://localhost:27017/sampledb";
-//var url = "mongodb://admin:secret@mongodb/sampledb";
+//var url = "mongodb://localhost:27017/sampledb";
+var url = "mongodb://admin:secret@mongodb/sampledb";
 
 mongoose.connect(url)
 
@@ -82,6 +82,35 @@ app.get('/terms', (req, res) => {
   // render `terms.ejs`
   res.render('terms')
 })
+
+app.get('/ai-news', (req, res) => {
+  // render `terms.ejs`
+  res.render('ai-news')
+})
+
+app.get('/ai-news1', (req, res) => {
+  // render `terms.ejs`
+  res.render('ai-news1')
+})
+
+app.get('/ai-news2', (req, res) => {
+  // render `terms.ejs`
+  res.render('ai-news2')
+})
+
+app.get('/ai-news3', (req, res) => {
+  // render `terms.ejs`
+  res.render('ai-news3')
+})
+app.get('/mobile-news', (req, res) => {
+  // render `terms.ejs`
+  res.render('mobile-news')
+})
+app.get('/quantumcomp', (req, res) => {
+  // render `terms.ejs`
+  res.render('quantumcomp')
+})
+
 
 app.get('/posts', (req, res) => {
 
@@ -279,7 +308,7 @@ console.log("poster: " + heading + responder + emailaddress + response);
    },
   auth: {
     user:'response@myafrihub.com.ng',
-    pass:'*************'
+    pass:'jarule11!'
   }
 
 }));

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Afrihub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.wrapper {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.search-background img {
+    width: 100%;
+}
+
+</style>
+</head>
+        <%- include('partials/navbar') %>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+		<div class="search-background">
+	<img src="/img/ai.jpg">
+            <h1>Can AI Write Its Own Applications? It's Trickier Than You Think</h1>
+		</div>
+        </div>
+
+        <div class="row">
+           <div class="panel panel-default">
+                        <div class="panel-body">                
+<p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://dzone.com/users/2618996/jbloomberg.html" target="_blank"style="color: rgb(0,0,255)"> Jason Bloomberg </font></a></p>
+                      <p class="list-group-item-text">Early last year, a Microsoft research project dubbed DeepCoder announced that it had made progress creating AI that could write its own programs.
+
+Such a feat has long captured the imagination of technology optimists and pessimists alike, who might consider software that creates its own software as the next paradigm in technology — or perhaps the direct route to building the evil Skynet.
+
+As with most machine learning or deep learning approaches that make up the bulk of today's AI, DeepCoder was creating code that it based on large numbers of examples of existing code that researchers used to train the system.
+
+The result: software that ended up assembling bits of human-created programs, a feat Wired Magazine referred to as "looting other software."
+
+And yet, in spite of DeepCoder's PR faux pas, the idea of software smart enough to create its own applications remains an area of active research, as well as an exciting prospect for the digital world at large.</p>
+
+<h2>The Notion of "Intent-Based Programming"</h2>
+
+<p>What do we really want when we say we want software smart enough to write applications for us? The answer: we want to be able to express our intent for the application and let the software take it from there.
+
+The phrase "intent-based" comes from the emerging product category "intent-based networking," an AI-based approach to configuring networks that divines the business intent of the administrator.
+
+An intent-based networking system (IBNS) enables admins to define a high-level business policy. The IBNS then verifies that it can execute the policy, manipulates network resources to create the desired state, and monitors the state of the network to ensure that it is enforcing all policies on an ongoing basis, taking corrective action when necessary.
+
+Intent-based programming, by extension, takes the concept of intent-based networking and extends it to any type of application a user might desire.
+
+For example, you could ask Alexa to build you an application that, say, kept track of your album collection. It would code it for you automatically and present the finished, working application to you, ready for use.</p>
+
+<h2>What Might Be Going on Under the Covers</h2>
+
+<p>In the simple Alexa example above, the obvious approach for the AI to take would be to find an application similar to the one the user requested and then make tweaks to it as necessary or perhaps assemble the application out of pre-built components.
+
+In other words, Alexa would be following a similar technique as DeepCoder, borrowing code from other places and using those bits and pieces as templates to meet a current need.
+
+But assembling templates or other human-written code isn't what we really mean by AI-written software, is it? What we're really looking for is the ability to create applications that are truly novel, and thus most of their inner workings don't already exist in some other form.
+
+In other words, can AI be creative when it creates software? Can it create truly novel application behavior, behavior that no human has coded before?</p>
+
+<h2>5GLs to the Rescue</h2>
+
+<p>Using software that can take the intent of the user and generate the desired application has been a wish-list item for computer science researchers for decades. In fact, the Fifth Generation Language (5GL) movement from the 1980s sought to "make the computer solve a given problem without the programmer," according to Wikipedia.
+
+The idea with 5GLs was for users to express their intent in terms of constraints, which the software would then translate into working applications. This idea appeared promising but turned out to have limited applicability.
+
+The sorts of problems that specifying constraints alone could solve turned out to be a rather small set: mostly mathematical optimization tasks that would seek a mathematical solution to a set of mathematical expressions that represented the constraints.
+
+The challenge facing the greater goal of creating arbitrary applications was that 5GLs weren't able to express algorithms — the sequence of steps programmers specify when they write code by hand.
+
+As a result, 5GLs didn't really go anywhere, although they did lead to an explosion of declarative, domain-specific languages like SQL and HTML — languages that separate the representation of the intent of users from the underlying software.
+
+But make no mistake: expressing your intent in a declarative language is very different from software that can create its own applications. Writing SELECT * FROM ALBUMLIST is a far cry from "Alexa, build me an app that keeps track of my albums."
+
+The missing piece to the 5GL puzzle, of course, is AI.</p>
+
+<h2>A Question of Algorithms</h2>
+
+<p>In the 1980s, we had no way for software to create its own algorithms, but with today's AI, perhaps we do. The simple optimization tasks that 5GLs could handle have grown into full-fledged automated optimization for computer algebra systems, which would qualify as computer-generated algorithms. However, these are still not general purpose.
+
+There are also research projects like Google AutoML, which creates machine learning-generated neural network architectures. You can think of a neural network architecture as a type of application, albeit one that uses AI. So in this case, we have AI that is smart enough to create AI-based applications.
+
+AutoML and similar projects are quite promising to be sure. However, not only have we not moved much closer to Skynet, but such efforts also fall well short of the intent-based programming goal I described earlier.</p>
+
+<h2>The Context for Human Intent</h2>
+
+<p>Fundamentally, AutoML and intent-based programming are going in different directions because they have different contexts for how users would express their intent. The Alexa example above is unequivocally human-centric, as it leverages Alexa's natural language processing and other contextual skills to provide a consumer-oriented user experience.
+
+In the case of AutoML (or any machine learning or deep learning effort, for that matter), engineers must express success conditions (i.e., their intent) in a formal way.
+
+If you want to teach AI to recognize cat photos, for example, this formal success condition is trivial: of a data set containing a million images, these 100,000 have cats in them. Either the software gets it right or it doesn't, and it learns from every attempt.
+
+What, then, is the formal success condition for "the album tracking application I was looking for?" Answering such a question in the general case is still beyond our abilities.</p>
+
+<h2>Today's State of the Art</h2>
+
+<p>Today's AI cannot create an algorithm that satisfies a human's intent in all but the simplest cases. What we do have is AI that can divine insights from patterns in large data sets.
+
+If we can boil down algorithms into such datasets, then we can make some headway. For example, if an AI-based application has access to a vast number of human-created workflows, then it can make a pretty good guess as to the next step in a workflow you might be working on at the moment.
+
+In other words, we now have autocomplete for algorithms — what we call "next best action." We may still have to give our software some idea of how we want an application to behave, but AI can assist us in figuring out the steps that make it work.</p>
+
+<h2>The Intellyx Take</h2>
+
+<p>AI that can provide suggestions for the next best action but cannot build an entire algorithm from scratch qualifies more as Augmented Intelligence than Artificial Intelligence.
+
+When we are looking for software that can satisfy human intent, as opposed to automatically solving a problem on its own, we're actually looking for this sort of collaboration. After all, we still want a hand in building the application — we just want the process to be dead simple.
+
+It's no surprise, therefore, that the burgeoning low-code/no-code platform market is rapidly innovating in this direction.
+
+Today's low-code/no-code platforms support sophisticated, domain-specific declarative languages that give people the ability to express their intent in English-like expressions (or other human languages of choice).
+
+They also have the ability to represent apps and app components as templates, affording users the ability to assemble pieces of applications with "drag and drop" simplicity.
+
+And now, many low-code/no-code platform vendors are adding AI to the mix, augmenting the abilities of application creators to specify the algorithms they intend their applications to follow.
+
+Someday, perhaps, we'll simply pick up our mic and tell such platforms what we want and they'll build it automatically. We're not quite there yet, but we're closer than we've ever been with today's low-code/no-code platforms, and innovation is proceeding at a blistering pace. It won't be long now.</p>
+                    
+                </div>
+	
+ 	<%- include('partials/footer') %>
+</body>
+<footer>
+</footer>
+</html>

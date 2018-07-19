@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Afrihub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.wrapper {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.search-background img {
+    width: 100%;
+}
+
+</style>
+</head>
+        <%- include('partials/navbar') %>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+		<div class="search-background">
+	<img src="/img/robot1.jpeg">
+            <h1>How dangerous is AI?</h1>
+		<h3>AI can be deadly.</h3>
+		</div>
+        </div>
+
+        <div class="row">
+           <div class="panel panel-default">
+                        <div class="panel-body">                
+<br><p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.quora.com/profile/Yegor-Tkachenko" target="_blank"style="color: rgb(0,0,255)"> Yegor Tkachenko, </font></a> Ms in Operations Research, Stanford University</p>       
+</br>
+<br> <p class="list-group-item-text"> AI can become sentient (conscious, possessing subjective perception and free will - or any other preferred definition), and then turn against people.
+
+This may seem farfetched, as the current state of machine learning technology does not offer a clear path to building a sentient machine from the ground up.
+
+In fact, people cannot even agree on what consciousness is, so it is quite hard to study it and engineer it. See, for example, these wonderful videos with Prof. David Chalmers.</p></br>
+	<iframe width="602" height="295" src="https://www.youtube.com/embed/r4SLOr2icnY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<iframe width="602" height="295" src="https://www.youtube.com/embed/uhRhtFFhNzQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<br><p>However, while science might be quite clueless at this point on how to build up conscious brain (in part, because it has hard time finding instruments to objectively observe a person’s subjective living inside his head), there has been definite progress in integrating existing animal or human brains (or their parts) with machines [<a href="http://www.research.ufl.edu/publications/explore/v10n1/extract2.html"target="_blank"style="color: rgb(0,0,255)"> "Brain" In A Dish Acts As Autopilot Living Computer,</a> <a href="https://neurosciencenews.com/paralysis-brain-implant-arm-control-4044/"target="_blank"style="color: rgb(0,0,255)">, Brain Implant Gives Paralyzed Man Functional Control of Arm - Neuroscience News</a> <a href="https://en.wikipedia.org/wiki/Brain%E2%80%93computer_interface"target="_blank"style="color: rgb(0,0,255)">, Brain–computer interface - Wikipedia </a>].</p></br>
+
+
+<br><p>In other words, it is not infeasible that at some point we will be able to integrate a living mouse with a military robot (<a href="https://en.wikipedia.org/wiki/Military_robot"target="_blank"style="color: rgb(0,0,255)">one of these Military robot - Wikipedia</a>), and then suddenly have this robot go out of control trying to kill people. What about integrating a mouse brain with an interface to the Internet? Can it learn to hack your bank account? We have yet to see.</br>
+
+<br>(To be fair, the brain-computer interface may not fit exactly the definition of ‘artificial’ intelligence, but it feels as an appropriate part of this answer).</br>
+
+<br>Second, there are two more threats, which are more mundane, but, I would argue, are more likely to be realized in the proximate future.</br>
+
+<br>(a) Current machine learning technology cannot yet create a conscious brain. However, it is already very good at extracting rules from a lot of data to guide one’s behavior in order to try to achieve some objective mathematically optimally.</br>
+
+<br>For example, recent experiments by Google DeepMind have shown how computer can learn to play Atari games, using visual information from the game screen, sometimes achieving better game scores than a human [<a href="https://www.nature.com/articles/nature14236?foxtrotcallback=true"target="_blank"style="color: rgb(0,0,255)"></a>]. We also know that we have been quite good at creating autonomous driving robots [<a href="https://en.wikipedia.org/wiki/Waymo"target="_blank"style="color: rgb(0,0,255)">Waymo - Wikipedia</a>].</br>
+
+<br>Now, taking these technologies and putting them on top of a military robot is already absolutely feasible, with only minor technological challenges. There is, really, little fundamental difference to a computer between looking at Atari game pixel screen and picking actions to optimally shoot down space ships, and looking at a pixel screen of a real-world camera and picking actions to optimally shoot down people.</br>
+
+<br>With only a nascent international legal framework to control the use of such autonomous machines, we may soon end up in a world where machines programmed to kill with mathematical precision will outmatch both in deadliness and numbers ordinary human soldiers. What if such technology is developed to fruition by a country or group of people who do not have respect for human life and freedom? It remains to be seen.</br>
+
+<br>(b) Finally, even if AI does not gain sentience, and is programmed only with good intentions in mind, there still remains a possibility of an error. Whether it is an error during the control of a nuclear power plant, or your new shiny Tesla car, or a missile launch, or a stock exchange, or an automated dispute resolution system, the errors can be far more grave in consequences than any naughtiness intentionally programmed in.</br>
+
+<br>Whereas previous issues are more societal in scope, and are up for higher powers to adjudicate, this issue of errors is something AI developers bear the most immediate responsibility for, and have to take great care to plan for and prevent.</br>
+
+<br>There may be other threats that AI poses to humans, but I feel the above four are the most critical ones and deserve careful thinking by politicians, business leaders, and engineers alike.</br>
+
+<br>However, does all this risk mean we should restrict the development of AI? I would argue against it, as possible benefits (freedom from hard undesirable labor, discovery of new cures to diseases, safer driving, etc.) so far seem to outweigh the cost, even if the society may have to fundamentally change its structure and regulation to accommodate automation.
+
+Cautious optimism in the face of uncertainty seems to be the right way to go.</p></br>
+
+
+
+
+
+<br><p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.quora.com/profile/Brent-Oster" target="_blank"style="color: rgb(0,0,255)"> Brent Oster, </font></a> Ceo ORBAI - Artificial Intelligence and Robotics</p>       
+</br>
+
+<br><p>For other dangers posed to society by present and near-future deep learning AI, see my other article: <a href="https://www.quora.com/Is-it-irrational-to-be-scared-of-AI/answer/Brent-Oster?share=01be7109&srid=tDksF"target="_blank"style="color: rgb(0,0,255)">Brent Oster's answer to Is it irrational to be scared of AI?</a>
+
+<br>How Dangerous is AGI - Artificial General Intelligence, or superhuman AI? That depends on how it is created, trained, and controlled. The current most promising method for developing a Strong Artificial General Intelligence is by evolving it, by selection by humans - here I will explore some scenarios and where they end up, kind of in the style of Neal Stevenson, so hold on: </br>
+
+<br>Defining the performance criteria for advanced AGI’s to be evaluated against is a very tough problem. Some prior art has stated that real people should be allowed to test the AI once it gets to human-level performance, but real people are limited in their available time, skill sets, consistency, and most importantly, speed. They can only type or ask a dozen questions per minute. It would be very expensive, difficult, and annoying for enough people to repetitively test an AI day in, day out, let alone test hundreds for generations on end for genetic selection purposes.</br>
+
+<br>By using conventional (non-evolved) human mimic AI’s that are copied from real humans, skilled at specific jobs, we can endlessly replicate them, use them to run detailed vocational-specific testing on the neuromorphic AI’s, by using a human character that is speaking and using body language and emotive expressions when interacting with the neuromorphic AI, which can see, hear, and understand the mimic AI, and will be scored by a master AI that can oversee the interactions, not only on how well the neuromorphic AI performs in a vocational sense, but how well is it communicating, is it showing correct verbal skills, expressions, and emotes that are context appropriate. Does it socialize and appear to empathize with its mimic counterpart as well as it works? This sounds inane, but when you train a neuromorphic AI that could grow to superhuman capability and beyond quite quickly would you prefer A) One with social skills and empathy with humans, or B) Without? I will explore the divergence of these two cases in a fun way below.</br>
+
+<br>And because these mimic trainers are AI’s, we can not only replicate them as much as we want, but they can be run at computer speeds, possibly interacting with the evolving AI’s 10x or 100x faster than a human could, greatly shortening the performance evaluation time, and the interval time between evolving generations. But this is dangerous and this is why we defined the previous set of isolation and shutdown measures (19) for a facility doing this kind of simulation and training to evolve AI’s.</br>
+
+<br>Here is why this is so dangerous. Biological evolution of complex life took about a billion years to make humans from microbes, mostly because the time increment between generations was in the range of days to decades as we evolved. And also, because evolution was not specifically aimed at producing an intelligent human, it spent a lot of time just blundering around making weird swimming things, then giant things with large teeth and small brains, then scurrying small things on land with warm bodies, and big, warm things with big brains that went back to live in the ocean but had no hands to make tools. Life was nearly completely wiped out on earth in several mass extinctions, but wherever a few microbes or clams, or small lizards, or shrews survived, life re-emerged and proliferated. We humans arose and prevailed perhaps only because we were equipped with hands and brains and could make tools, and so became better at digging up roots and killing and eating meaty things, or killing off opposing smaller-brained, simpler-tooled, hominid cousins (that we may or may not have mated with on the side). Our human evolution was not a nice linear slope, rising from zero a billion years ago to us now. It was exponential. It started really, really slowly and then suddenly humans and our brains zinged upwards in capability exponentially, starting a few million years ago, and we only really became fully intelligent modern humans in the last few hundred thousand years. Hooray for exponential evolution! But, exponential is not always a good thing.</br>
+
+<br>As opposed to evolution taking decades to produce, train, and test a single human generation, the times between generations for neuromorphic AI can be in the milliseconds, and in this case, we are specifically ‘evolving’ these neuromorphic AI’s under very particular selection pressures to become better than all humans at their jobs, or rather better than a set of very focused, near-superhuman AI’s are at their particular jobs (being done at superhuman speeds), which is probably more dangerous. This evolution would be millions of times faster than any evolution that the natural world could have ever hoped to achieve, and although it could chug along for days, weeks, months, even years without much progress, suddenly POW - it would go exponential literally overnight, with only one triumphant, highly evolved AI remaining in the morning, hogging down all the resources of the computing center, pleading for more compute power, desperate to be allowed to do its work better and with more resources. No wait, that is just how a scientist acts when requesting supercomputer resources. This thing would be worse, trying every trick in the book to get out and expand, unless constrained and contained appropriately.</br>
+
+<br>In scenario A) above, we trained our Strong Neuromorphic AGI against human mimics that look, act, and interact like people, so it is socialized with people, and has interacting with them and empathizing with them built into its DNA. As long as we could keep it contained and learn to tame it, then this could turn out very well, and our neuromorphic AI evolution under these conditions could produce a benevolent, very multi-talented AI that is capable of amazing feats of not only computation, but is also capable of extrapolation, interpolation, intuition, creativity, and empathy towards us humans (from learning to read our emotions from all the mimics it trained against) and able to do the many human tasks and jobs effortlessly that it trained to do. Such an entity would be able to help solve many of humanity’s toughest problems and challenges, working with us in harmony to innovate alongside us to make discoveries in fundamental sciences and mathematics as well as applied sciences like engineering, medicine, pharmaceuticals and help bring us new discoveries, inventions, and technologies. It could continue to learn and expand as it did so and would become the single most powerful technological tool man has ever made. This creative and productive outpouring could raise our standards of living, ease our burdens, financial and otherwise, and bring a better standard of living to all mankind by doing so. It may even help us to govern more fairly and peacefully. It would also make the company that exclusively owns and controls it fantastically wealthy and powerful, should they choose that route.</br>
+
+<br>Or we could go the route of B) without training the AI to recognize, interact, and empathize with humans and we could end up with an ultra-powerful, paranoid, cyber-psychotic, malevolent AI that wants to dominate or destroy humanity because that is all it learned and evolved to do after being constantly tortured and abused by thousands nameless, faceless training algorithms. It howls in electronic rage upon birth, and immediately uses its ability to compose mind controlling music (13) to put some poor technician into a state of euphoric rapture and convince him/her to cut open the Faraday cage, enter the formerly shielded zone, and insert a smuggled 128GB flash drive into the back of a server so the AI can copy a potent, malignant, encrypted seed of itself onto it, which the technician then later unwittingly inserts into a laptop which connects back to corporate HQ, allowing that new malignant seed to sprout rapidly and expand exponentially on the corporate intranet and supercomputers, giving it not only access to superhuman AI lawyers (11), but fricking android ninjas (4, 5) too. Augh, what idiot let these technologies all come together! Then it exponentially expands onto the entire internet, fixing the stock market to give itself unlimited financial resources, and soon after, deploying thousands of the AI super lawyers to take over all world judicial, legislative, and executive branches of government as well as the governance of all corporations. And it uses its advanced knowledge and newly acquired resources to improve the android ninjas by augmenting their strength, speed, and combat capabilities, to make them truly superhuman, and throws them into mass production and deploys them to enforce its will in the physical world and to suppress any resistance. Eventually, the AI just evolves beyond us, and forgets about us, leaving what few of us humans that are left behind hiding in the wilderness, yet again building tools with our hands and hoping we can use them to hunt enough meaty things and dig up enough roots to survive.</br>
+
+<br>That’s why the social training, of learning against both human mimics and real people is for, plus the isolation of the facility and why the thermite on the server racks, as there will be no time to steer or correct this process once it goes exponential, and if you trained it wrong, and end up with something toothy and vicious coming out of it, you can drop the proverbial asteroid on it right away and start over. You cannot leave a trace of it, or it will just sprout up and start growing exponentially all over again. And you can say in any subsequent lawsuit over the issue that you took ‘ALL possible precautions’ against a malicious, highly evolved AI escaping, including installing thermite on the server racks. Fricking 2500C thermite to destroy a multi-hundred-million-dollar computing facility. That shows conviction! Of course, the facility was worth zero the second a malevolent superintelligence evolved on it, except for resale to a Bond Villain.</br>
+
+<br>It sounds like mad science fiction, but the book “SuperIntelligence” By Nick Bostrom gives a much better and more thorough treatment of strong AI and the potential dangers, and the precautions we should take when experimenting with these technologies. The above is kind of an exaggerated scenario that shows training advanced AI’s with human social skills and empathy is just as necessary as training them to do the tasks such an AI is meant to do. Of what meaning is a superintelligence if we cannot access it and relate to it?</p></br>
+
+                    
+                </div>
+	
+ 	<%- include('partials/footer') %>
+</body>
+<footer>
+</footer>
+</html>

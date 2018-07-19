@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Afrihub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+a:link { color: blue; }
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.wrapper {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.search-background img {
+    width: 100%;
+}
+
+</style>
+</head>
+        <%- include('partials/navbar') %>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+		<div class="search-background">
+	<img src="/img/quantum.jpg">
+            <h1>What are some Good Books for Learning Quantum Computation?</h1>
+		</div>
+        </div>
+
+        <div class="row">
+           <div class="panel panel-default">
+                        <div class="panel-body"> 
+	<img src="/img/quantum-computer.png">               
+<br><p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.quora.com/profile/Barak-Shoshany" target="_blank"style="color: rgb(0,0,255)"> Barak Shoshany, </font></a> Graduate Student at Perimeter Institute for Theoretical Physics</p>       
+</br>
+<br> <p class="list-group-item-text"> I would start with <a href="https://www.amazon.com/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565/" target="_blank"style="color: rgb(0,0,255)">Quantum Computing since Democritus by Scott Aaronson.</a> It's a relatively light book that will teach you the basics of theoretical computer science, quantum mechanics and other topics in a fun and intuitive way, without going into much detail in terms of proofs, definitions and so on.
+
+After that, read <a href="https://www.amazon.com/Quantum-Computation-Information-10th-Anniversary/dp/1107002176/" target="_blank"style="color: rgb(0,0,255)">Quantum Computation and Quantum Information by Nielsen & Chuang</a>, which is considered the standard textbook in the field. You don't really know quantum computation until you read this book from cover to cover.
+
+I also liked <a href="https://www.amazon.com/Quantum-Computer-Science-David-Mermin/dp/0521876583/ref=sr_1_1?ie=UTF8&keywords=Quantum+Computer+Science%2C+An+Introduction&qid=1401517093&s=books&sr=1-1" target="_blank"style="color: rgb(0,0,255)">Quantum Computer Science: An Introduction by N. David Mermin</a>, which is roughly at an intermediate level between the two books above; but try those two first.</p></br>
+
+
+<br><p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.quora.com/profile/Matthew-Saul-Leifer" target="_blank"style="color: rgb(0,0,255)"> Matthew Saul Leifer, </font></a> Previously a Postdoctoral Fellow in Quantum Information Theory</p>       
+</br>
+	
+
+<br><p>First we need to establish what you mean by "quantum computing".  Are you interested in the project of building a practical quantum computer?  Do you want to know what we could do with quantum computers if we had them?  Do you want to know about related subjects like quantum information and quantum cryptography?</p></br>
+
+
+<br>As mentioned by David Toyli, Nielsen and Chuang is considered the bible of the subject, so you should definitely obtain a copy.  It was published around 2000, so its treatment of some topics is dated, but there is still no better overview of the whole field.  Prior to the publication of N&C, most of us learned the subject from John Preskill's lecture notes <a href="http://www.theory.caltech.edu/~preskill/ph219/index.html#lecture"target="_blank"style="color: rgb(0,0,255)">Physics 219 Course Information</a>, which cover similar ground and are good if you want a free (as in beer) option.</br>
+
+<br>
+For specific subtopics, more recent books are better.  Kaye, Laflamme and Mosca or Mermin are good if you want to know about quantum computers specifically, but they don't cover quantum information or cryptography in any detail.  For quantum information, Mark Wilde's book is recommended <a href="https://arxiv.org/abs/1106.1445"target="_blank"style="color: rgb(0,0,255)">[1106.1445] From Classical to Quantum Shannon Theory</a>.  The link is to a freely available pdf, but a print version is due to be published by Cambridge University Press.</br>
+
+<br>There are also a number of books that aren't about quantum computing specifically, but they develop quantum theory in a way that is particularly suited to it.  Although you say you are very familiar with quantum physics, there are certain basic topics that are key to quantum information and computing that are not covered in most textbooks or courses on the subject.  The treatment of these topics in books specifically about quantum computing is often quite rough and ready, and can lead to confusion.  Therefore, it is definitely worth taking a look at:</br>
+
+<br>
+<ul>
+<li>Quantum Processes Systems & Information by Schumacher and Westmoreland <a href="https://www.amazon.co.uk/Quantum-Processes-Information-Benjamin-Schumacher/dp/052187534X"target="_blank"style="color: rgb(0,0,255)">Amazon.co.uk: Benjamin Schumacher, Michael Westmoreland: Books</a></li>
+<li>The Mathematical Language of Quantum Theory (From Uncertainty to Entanglement) by Heinosaari and Ziman <a href="https://www.amazon.co.uk/Mathematical-Language-Quantum-Theory-Entanglement/dp/0521195837"target="_blank"style="color: rgb(0,0,255)"> From Uncertainty to Entanglement: Amazon.co.uk: Teiko Heinosaari, Mário Ziman: Books</a> </li>
+</ul></br>
+<br>Finally, if you are into the theory side then you would benefit from understanding the relevant parts of classical computer science, for which I recommend:</br>
+
+<ul>
+<li>Computational Complexity by Papadimitriou</li>
+<li>Elements of Information Theory by Cover and Thomas</li>
+</ul>
+
+<br><h2><a href="https://www.amazon.in/gp/product/0199236771/ref=as_li_tl?camp=3626&creative=24790&creativeASIN=0199236771&ie=UTF8&linkCode=as2&tag=goodoffer-21"target="_blank"style="color: rgb(0,0,255)"> An Introduction to Quantum Computing</a></h2></br>
+
+<br><h2>Key Features:</h2></br>
+
+<br> 1. Assumes basic background in mathematics and computer science
+
+2. Emphasis on pedagogical presentation of concepts
+
+3. Clear, explanatory diagrams are provided throughout
+
+4. Contains numerous integrated exercises </br>
+
+
+<h2>About the Book:</h2>
+
+<br>An Introduction to Quantum Computing This concise, accessible text provides a thorough introductionto quantum computing - an exciting emergent field at the interfaceof the computer, engineering, mathematical and physical sciences.Aimed at advanced undergraduate and beginning graduate students inthese disciplines, the text is technically detailed and is clearlyillustrated throughout with diagrams and exercises. Some priorknowledge of linear algebra is assumed, including vector spaces andinner products. However, prior familiarity with topics such asquantum mechanics and computational complexity is not required.</br>
+
+<br>Contents</br>
+<p>Preface</p>
+<p>1: Introduction and background
+
+2: Linear algebra and the Dirac notation
+
+3: Qubits and the framework of quantum mechanics
+
+4: A quantum model of computation
+
+5: Superdense coding and quantum teleportation
+
+6: Introductory quantum algorithms
+
+7: Algorithms with super-polynomial speed-up
+
+8: Algorithms based on amplitude amplification
+
+9: Quantum computational complexity theory and lower bounds
+
+10: Quantum error correction
+
+Appendices
+
+Bibliography
+
+Index </p>
+
+<h3>About the Authors:</h3><p>Phillip Kaye, Raymond Laflamme, Michele Mosca Phillip Kaye, Institute for Quantum Computing, University ofWaterloo, Ontario, Canada, Raymond Laflamme, Institute for QuantumComputing, University of Waterloo, Ontario, Canada, and MicheleMosca, Institute for Quantum Computing, University of Waterloo,Ontario, Canada.</p>
+
+<h2><a href="https://www.amazon.in/gp/product/0593071158/ref=as_li_tl?camp=3626&creative=24790&creativeASIN=0593071158&ie=UTF8&linkCode=as2&tag=goodoffer-21"target="_blank"style="color: rgb(0,0,255)">Computing With Quantum Cats: From Colossus To Qubits </a> </h2>
+
+<br>Pioneering study of the science behind quantum computing and what the new quantum reality will mean for mankind.</br>
+
+<br>The quantum computer is no longer the stuff of science fiction. Pioneering physicists are on the brink of unlocking a new quantum universe which provides a better representation of reality than our everyday experiences and common sense ever could. The birth of quantum computers which, like Schrödinger's famous 'dead and alive' cat, rely on entities like electrons, photons or atoms existing in two states at the same time - is set to turn the computing world on its head.</br>
+
+<br>In his fascinating study of this cutting-edge technology, John Gribbin updates his previous views on the nature of quantum reality, arguing for a universe of many parallel worlds where 'everything is real'. Looking back to Alan Turing's work on the Enigma machine and the first electronic computer, Gribbin explains how quantum theory developed to make quantum computers work in practice as well as in principle. He takes us beyond the arena of theoretical physics to explore their practical applications from machines which learn through 'intuition' and trial and error to unhackable laptops and smar-tphones. And he investigates the potential for this extraordinary science to create a world where communication occurs faster than light and teleportation is possible.</br>
+
+<h3>Happy Learning</h3>
+
+
+<br><p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.quora.com/profile/Aman-Kaushik-71" target="_blank"style="color: rgb(0,0,255)"> Aman Kaushik, </font></a>studied Business and Economics</p>       
+</br>
+
+<br>Assuming that you’re naïve when it comes to Quantum Computing. I have put-forth a bunch of books, which will help you to gain a good insight on Quantum Computing.</br>
+
+<br>1)Quantum Computing A gentle Introduction</p></br>
+	<img src="/img/quantum1.jpeg">
+
+
+<br><p>This book covers all the basics you need to know about quantum computing and has generalised all the pivotal aspects in layman terms.</br>
+
+
+<br>2)Automatic Quantum computer programming(2004) </br>
+	<img src="/img/quantum.jpeg">
+
+<br>This book will assist you in the world of quantum computing. All the complex terms in QC are thoroughly explained.</br>
+
+<br>Cheers!</br>
+
+
+
+<br><p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.quora.com/profile/Vlad-Sa" target="_blank"style="color: rgb(0,0,255)"> Vlad Sa, </font></a>Physics is a healthy hobby.(for the mind, of course)</p>       
+</br>
+
+<br>Since you already have been provided some useful material for learning the basics of quantum computing, I will recommend you a series of online video lectures. I learned the basics of quantum computing only after I followed Professor's Susskind lectures on quantum computing that I strongly recommend.</br>
+
+<iframe width="602" height="295" src="https://www.youtube.com/embed/2h1E3YJMKfA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<br>Also, after you follow them, you can search for courses from Umesh Vazirani on quantum computers. I also have a personal project ( an implementation of a particle that supports basis change, measurement and defining states/basis ). You can try and play with it. It might prove useful material for understanding some base quantum phenomena. You can find it <a href=""target="_blank"style="color: rgb(0,0,255)">here</a></br>
+
+
+<br><p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.quora.com/profile/Juan-Jo-10" target="_blank"style="color: rgb(0,0,255)"> Juan Jo </font></a></p>       
+</br>
+
+
+<br>I've being looking for the most common ones and reading some reviews at Amazon, and created this list:</br>
+
+<br>A Short Introduction to Quantum Information and Quantum Computation, Le Bellac, 2006</br>
+
+<br>
+<ul>
+<li>An Introduction to Quantum Computing Algorithms, Pittenger, 2001</li>
+<li>An introduction to quantum computing, Kaye, Laflamme,Mosca, 2007</li>
+<li>Classical and Quantum Computation, Kitaev, 2002</li>
+<li>Elements of quantum computation and Quantum Communication, Anirban, 2013.</li>
+<li>Entanglement, quantum phase transitions and quantum algorithms, Lacort,</li>
+<li>Experimental Aspects of Quantum Computing, Everitt, 2005</li>
+<li>Explorations in Quantum Computing, Williams, 2010</li>
+<li>Introduction to Quantum Information Processing, Lucke.</li>
+<li>Introduction to Information Retrieval and Quantum Mechanics, Melucci, 2015</li>
+<li>Introduction to Quantum Computing, Wartrous Notes, 2006</li>
+<li>Logic and Algebraic Structures in Quantum Computing, Chubb, 2010</li>
+<li>Nano, Quantum And Molecular Computing, Shukla, Bahar, 2004</li>
+<li>Quantum Algorithms Via Linear Algebra, Lipton, 2014</li>
+<li>Quantum Computation and Quantum Communication, Theory and Experiments, Pavicic, 2006</li>
+<li>Quantum Computation and Quantum Information, Nielsen, Chuang, 2011</li>
+<li>Quantum Computer Science An Introduction, Mermin, 2007</li>
+<li>Quantum Computer Science, Lanzagorta, Uhlmann, 2008</li>
+<li>Quantum Computer. How It Works Issue 95, 2017</li>
+<li>Quantum Computing, A Gentle Introduction, Rieffel, Polak, 2014</li>
+<li>Quantum Computing Explained, McMahon, 2007</li>
+<li>Quantum Computing for Computer Architects, Metodi, 2011</li>
+<li>Quantum Information and Quantum Computing, Nakahara, 2013</li>
+<li>Quantum Computing for computer scientists, Yanofsky y Manucci, 2008</li>
+<li>Quantum Computing since Democritus, Aaronson, 2013</li>
+<li>Quantum Engineering, Zagonskin, 2011</li>
+<li>Quantum Information Computation and Communication, Jones, 2010</li>
+<li>Quantum Quenching, Annealing and Computation, Somma, 2010</li>
+<li>Quantum Walks and Search Algorithms, Portugal, 2013</li>
+<li>Quantum computation, Aharanov,</li>
+<li>Quantum Walks for Computer Scientists, Venegas, 2008</li>
+<li>Reversible Computing Fundamentals, Quantum Computing, and Applications, De Vos, 2010</li>
+<li>The Temple of Quantum Computing, Perry, 2004.</li>
+<li>The Limits of Quantum Computers, Aaronson</li>
+<li>What Quantum Computing Means to Data Mining, Wittek, 2014</li>
+</ul>
+</br>
+
+<br>Some people chooses Laflamme, Rieffel or Yanofsky as introductor books. But maybe nowadays there exist newer ones better than the oldies.
+And they choose Nielsen as the advanced one.
+It's difficult to find comparisons.</br>
+
+<br>I'm looking for a book well explained without too much mathematics, mixing some theory, some details on the experimental construction and much details on the algorithms. And if possible not too old, with new topics.
+For somebody with a good level of maths and classical computers who passed his exams on quantum mechanichs many years ago and forgot some things.
+Maybe Quantum Computing for Computer Architects or something targeted to engineers?</br></p>
+
+
+
+		
+                </div>    
+	
+ 	<%- include('partials/footer') %>
+
+<script>$element.html(indicator.link(url));</script>
+</body>
+<footer>
+</footer>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Afrihub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.wrapper {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.search-background img {
+    width: 100%;
+}
+
+</style>
+</head>
+        <%- include('partials/navbar') %>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+		<div class="search-background">
+	<img src="/img/aidream.jpg">
+            <h1>AI, Machine Learning, and Deep Learning: The simplified distinction</h1>
+		</div>
+        </div>
+<div class="panel panel-default">
+                        <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="list-group">                  
+<p><font color="green"> <i class="fa fa-user"></i> Created by: <a href="https://www.linkedin.com/in/mai-l%C3%AA-a68b2611b/" target="_blank"style="color: rgb(0,0,255)"> Mai Le </font></a></p>
+
+<h2>1. Artificial Intelligence: The dream </h2>
+                      <p class="list-group-item-text">AI was first defined by John McCarney in 1956 as computer systems being able to mimic human characteristics and perform tasks normally requiring human intelligence. An AI in its creator’s perfect vision will be able to plan, to understand natural human language, to recognizing objects or sound, along with to learn and acquiring knowledge.
+
+There are many ways for us to distinguish among various types of AI. However, for the sake of simplification, the mass audience tends to go with the 2-tier division, including Narrow AI and General AI.
+
+Narrow AI (also known as Weak AI) is the artificial intelligence that can perform one human-like task quite well but lacks in others. The most prominent examples of this AI’s type is probably Siri of Apple or Alexa of Amazon. ‘They’, although very sophisticated, function within a limited pre-coded spectrum, having no intelligence of ‘their own’, no ability to learn by ‘themselves’.</p>
+	<div>
+	<img src="/img/reminder.jpg">
+        <div class="text">SIRI Interface</div>
+</div>
+
+
+<p>On the other hand, General AI (also known as Strong AI) is the artificial intelligence that carries all characteristics of human intelligence. In fact, in order to be considered as a General AI, the machine must past 4 specific tests — as stated by the Machine Intelligence Research Institute:</p>
+
+<ul>
+<li> 
+The Turing test: A human evaluator would judge natural language conversations — through text-channel only — between a human and a machine. All participants would be in separate rooms from each other. If the evaluator cannot reliably tell the machine from the human, the machine has passed the test.
+</li>
+
+<li>
+The Coffee test: The machine must go into an average American house and find out how to make coffee. It will have to identify the coffee machine, figure out what button does what, find the cabinet that the coffee is stored in, and so on
+</li>
+
+<li>
+The Robot College Student test: The machine must enroll in a human university, take classes in the same manner as a human and graduate with a degree as a human.
+</li>
+
+<li>
+The Employment test: The machine must have an economically important job and perform in it well enough to pass special vocational exams designed for that job.
+</li>
+</ul>
+
+<p>So far, AGI is still a science fiction character. Right now, the closest inspiration for what an AGI can be like is Sophia — a social humanoid robot developed by Hong Kong-based company Hanson Robotics.</p>
+
+<div>
+	<img src="/img/aigirl.jpg">
+        <div class="text">Sophia the Robot</div>
+</div>
+
+
+<h2>2. Machine Learning: First sign of Artificial Intelligence’s Cognition</h2>
+<h3> Machine learning, in short, is one of the mean to achieve AI.</h3>
+
+<p>As explained by Arthur Samuel in 1959, it is a field of computer science that uses the statistical technique to give computers the ability to progressively improve their performances on a specific task without being explicitly programmed. In other words, rather than hand-coding software routines with a specific set of instructions to accomplish a particular task, the machine is “taught” using large amounts of data and algorithms that give it the ability to learn how to perform the task.
+A prominent example of this technology real-life application is the Facebook’s face recognition feature. In the past, the user constantly ‘fed’ the website with a large number of pictures. In some, he even tagged his friends — linking the friends’ faces to their personal accounts. As time went by, Facebook learned how those particular friends look like, even from different angles. Hence, that user can now upload another picture and let the machine automatically identify the person in that picture. It is not always right, but it is closed.</p>
+
+<div>
+	<img src="/img/facereco.jpg">
+        <div class="text">Face Recognition Technology</div>
+</div>
+
+
+<h2>3. Deep Learning: Human imprint on Artificial Intelligence</h2>
+<h3>Deep learning is one of many ways to approach machine learning.</h3>
+
+<p>First coined by Rina Dechter in 1986, deep learning is based on the idea of Artificial Neural Networks (also known as ANN) — which is vaguely inspired by the human biological nervous system, or to put it simply, the human brain.
+
+In the brain, the action of ‘learning’ relies on the interconnecting nature of many neurons. One neuron firing inspires others to fire.
+
+In the ANN’s deep learning technology, there are also ‘neurons’. But unlike a human brain where any neuron can connect to any others within a certain physical distance, the ANN has discrete layers and directions of data reproduction. Each layer contains a number of neurons. Each neuron holds a score (also known as an activation) which is responsible for assigning a weighting to its input, depends on how correct or incorrect it is relative to the task being performed. The final output is then determined by the total of those weightings.</p>
+
+
+<p>For example, a human hand-writes a number — which as we know, can be varied in shape from the standard keyboard numbers. That human then takes a picture, chop it up into a bunch of tiles that are inputted into the ANN. The number of ANN’s ‘neuron’ in the first layer depends on the number of tiles. When certain first-layer neurons have a high score — indicating the similarity of the hand-written number with a number in the ANN programme, they activate certain neurons in the second layers. The algorithm moves forward with each layers doing their job until the final layer, where the output is produced: the computer learn what is the number that was being written. The system might be 79% confident the image is a 9, 12% confident it’s a 3, 2% it’s a 1, and so on.
+
+In conclusion, all three fields are closely entwined but different in definitions. Deep Learning has enabled numerous practical applications of Machine Learning and by extension, the overall AI field. It breaks down tasks and processes in ways that make all kinds of machine assistant seem more possible than ever. Driverless cars, virtual butler or simply better movie recommendations — all are on the horizon.
+
+Acknowledging this thriving potential, Savvycom officially launched a new AI Lab back in March 2018. Leading by Dr. Long Tran, our team have introduced two AI applications:</p>
+
+<ul>
+<li> Visual Search with AI: an Artificial Intelligence Visual Search tool to utilize the big E-commerce database of thousands of products and amplify the E-commerce experiences.</li>
+
+<li>AskFred — AI Chatbot: an All-in-One Artificial Intelligence Chatbot that acts as a personal assistant in both workplace and daily life interaction, thanks to its machine learning model and personality test feature.</li>
+
+</ul>
+
+<p>We are confident that with our talented experts and engineers from top universities in the US and Europe, we can capture and satisfy the client’s growing demand for innovative solutions.</p>
+                    
+                </div>
+                </div>
+                </div>
+	
+ 	<%- include('partials/footer') %>
+</body>
+<footer>
+</footer>
+</html>
