@@ -308,7 +308,7 @@ console.log("poster: " + heading + responder + emailaddress + response);
    },
   auth: {
     user:'response@myafrihub.com.ng',
-    pass:'***************'
+    pass:'jarule11!'
   }
 
 }));
